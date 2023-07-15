@@ -1,12 +1,20 @@
-function ExpenseItem() {
+import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
+import Card from "./Cards";
+// const ExpenseDate=Date(2023,6,28)
+// const ExpenseDesc='Car Insurance'
+// const ExpensePrice=6000
+// We can use any name for arugment eg props or data
+function ExpenseItem(props) {
+ 
   return (
-    <div>
-      <div>Date</div>
-      <div>
-        <h2>Title</h2>
-        <div>Amount</div>
+    <Card className="expense-item">
+      <ExpenseDate date={props.date}></ExpenseDate>
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">RS {props.price}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
