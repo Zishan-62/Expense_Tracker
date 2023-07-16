@@ -1,4 +1,4 @@
-import Card from "./Cards"
+import Card from "../UI/Cards"
 import ExpenseItem from "./ExpenseItem"
 import './Expenses.css'
 function Expenses(props){
